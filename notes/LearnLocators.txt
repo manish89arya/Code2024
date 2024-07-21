@@ -1,6 +1,8 @@
 Practice Website:
 https://theautomationzone.blogspot.com/2020/07/xpath-practice.html
 
+https://theautomationzone.blogspot.com/2020/07/sample-webtable-3.html
+
 //*[(@attribute1='value1' and @attribute2='value2') or @attribute3='value3' ]
 
 
