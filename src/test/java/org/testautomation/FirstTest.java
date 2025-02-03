@@ -7,11 +7,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
+import pom.base.BaseTest;
 
 import java.time.Duration;
 
-public class FirstTest {
-    WebDriver driver = new ChromeDriver();
+public class FirstTest extends BaseTest {
     @Test
     public void dummyTest() {
 

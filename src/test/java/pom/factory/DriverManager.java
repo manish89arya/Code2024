@@ -1,4 +1,4 @@
-package factory;
+package pom.factory;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,6 +12,5 @@ public class DriverManager {
         return driver;
     }
 
-    public 
 
 }
