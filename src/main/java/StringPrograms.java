@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
+
 public class StringPrograms {
     public static void reverseString(String str) {
 
@@ -30,4 +35,46 @@ public class StringPrograms {
 
     }
 
+    public static void charArrayDemo() {
+        //Using a Character Array (char[])
+//        char[] c = new char[3];
+//        char c[] = new char[3];
+        char[] c = {'a', 'b', 'c'};
+        int chararraysize = c.length - 1;
+        System.out.println("Length of a character Array: " + chararraysize);
+        System.out.println(c[0]);
+        char[] reverseCharArray = new char[chararraysize];
+
+        for (int i = chararraysize - 1; i > 0; i--) {
+            reverseCharArray[i - (chararraysize - 1)] = c[i];
+        }
+
+        for(char value : reverseCharArray) {
+            System.out.print(value);
+        }
+
+    }
+
+    public static void reverseUsingStringBuffer(String str) {
+        StringBuffer sf = new StringBuffer(str);
+        System.out.println(sf.reverse());
+    }
+
+    public static void reverseCharArray()
+    {
+       char[] ch1 = {'h','e','l','l','o'};
+       StringBuilder reverseCharArray= new StringBuilder();
+
+       for(int i=ch1.length-1; i>=0; i--)
+       {
+           reverseCharArray.append(ch1[i]);
+
+       }
+        System.out.println(reverseCharArray);
+
+    }
+
+
 }
+
+
