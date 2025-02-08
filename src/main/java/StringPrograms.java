@@ -74,6 +74,26 @@ public class StringPrograms {
 
     }
 
+    public static void reverseCharArrayWithNoExtraMemory(char[] c) {
+        //Write a function that reverses a string.
+    // The input string is given as an array of characters s.
+        //You must do this by modifying
+    // the input array in-place with O(1) extra memory.
+    int start=0;
+    int end = c.length-1;
+
+    while(start < end)
+    {
+        char tmp = c[start];
+        c[start]=c[end];
+        c[end]= tmp;
+        start++;
+        end--;
+    }
+        System.out.println(c);
+
+    }
+
 
 }
 
