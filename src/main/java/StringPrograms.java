@@ -94,6 +94,11 @@ public class StringPrograms {
 
     }
 
+    public static void removeJunkCharsFromAString(String s)
+    {
+     String s1=   s.replaceAll("[^a-zA-Z0-9]","");
+        System.out.println(s1);
+    }
 
 }
 
