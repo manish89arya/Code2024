@@ -10,5 +10,7 @@ public class Programs {
 //        StringPrograms.reverseCharArray();
 //        StringPrograms.charArrayDemo();
 //      StringPrograms.reverseString(input);
+        Interview.testQuestion();
+        StringPrograms.getCharCountInString("aaaabbbb");
     }
 }

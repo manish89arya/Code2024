@@ -1,7 +1,4 @@
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class StringPrograms {
     public static void reverseString(String str) {
@@ -111,6 +108,25 @@ public class StringPrograms {
         }
         System.out.println(r);
 
+    }
+
+    public static void getCharCountInString(String s)
+    {
+        char[] inputCharArray = s.toCharArray();
+        Map<Character, Integer> h = new HashMap<>();
+
+        for (char c: inputCharArray)
+        {
+            if(h.containsKey(c)){
+                h.put(c,h.get(c)+1);
+            }
+            else
+            {
+                h.put(c,1);
+            }
+
+        }
+        System.out.println(s +" : "+h);
 
 
     }
