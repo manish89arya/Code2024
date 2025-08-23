@@ -1,16 +1,16 @@
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class StringPrograms {
     public static void reverseString(String str) {
 
-    int length = str.length(); // 8
-        System.out.println("Length of String is: "+length);
-        System.out.println("First char of String is: "+str.charAt(length-1));
-    String rev = "";
-    for(int i=length-1; i>=0; i--)
-    {
-        rev = rev+str.charAt(i);
-    }
+        int length = str.length(); // 8
+        System.out.println("Length of String is: " + length);
+        System.out.println("First char of String is: " + str.charAt(length - 1));
+        String rev = "";
+        for (int i = length - 1; i >= 0; i--) {
+            rev = rev + str.charAt(i);
+        }
         System.out.println(rev);
     }
 
@@ -42,11 +42,9 @@ public class StringPrograms {
         System.out.println(c[0]);
         char[] reverseCharArray = new char[chararraysize];
 
-        for (int i = chararraysize - 1; i > 0; i--) {
-            reverseCharArray[i - (chararraysize - 1)] = c[i];
-        }
+        System.arraycopy(c, 1, reverseCharArray, 1 - (chararraysize - 1), chararraysize - 1);
 
-        for(char value : reverseCharArray) {
+        for (char value : reverseCharArray) {
             System.out.print(value);
         }
 
@@ -57,76 +55,66 @@ public class StringPrograms {
         System.out.println(sf.reverse());
     }
 
-    public static void reverseCharArray()
-    {
-       char[] ch1 = {'h','e','l','l','o'};
-       StringBuilder reverseCharArray= new StringBuilder();
+    public static void reverseCharArray() {
+        char[] ch1 = {'h', 'e', 'l', 'l', 'o'};
+        StringBuilder reverseCharArray = new StringBuilder();
 
-       for(int i=ch1.length-1; i>=0; i--)
-       {
-           reverseCharArray.append(ch1[i]);
+        for (int i = ch1.length - 1; i >= 0; i--) {
+            reverseCharArray.append(ch1[i]);
 
-       }
+        }
         System.out.println(reverseCharArray);
 
     }
 
     public static void reverseCharArrayWithNoExtraMemory(char[] c) {
         //Write a function that reverses a string.
-    // The input string is given as an array of characters s.
+        // The input string is given as an array of characters s.
         //You must do this by modifying
-    // the input array in-place with O(1) extra memory.
-    int start=0;
-    int end = c.length-1;
+        // the input array in-place with O(1) extra memory.
+        int start = 0;
+        int end = c.length - 1;
 
-    while(start < end)
-    {
-        char tmp = c[start];
-        c[start]=c[end];
-        c[end]= tmp;
-        start++;
-        end--;
-    }
+        while (start < end) {
+            char tmp = c[start];
+            c[start] = c[end];
+            c[end] = tmp;
+            start++;
+            end--;
+        }
         System.out.println(c);
 
     }
 
-    public static void removeJunkCharsFromAString(String s)
-    {
-     String s1=   s.replaceAll("[^a-zA-Z0-9]","");
+    public static void removeJunkCharsFromAString(String s) {
+        String s1 = s.replaceAll("[^a-zA-Z0-9]", "");
         System.out.println(s1);
     }
 
-    public static void reverseInteger(int n)
-    {
+    public static void reverseInteger(int n) {
 
         int r = 0;
-        while(n!=0 && n<Integer.MAX_VALUE)
-        {
-            r= r*10+n%10;
-            n=n/10;
+        while (n != 0 && n < Integer.MAX_VALUE) {
+            r = r * 10 + n % 10;
+            n = n / 10;
         }
         System.out.println(r);
 
     }
 
-    public static void getCharCountInString(String s)
-    {
+    public static void getCharCountInString(String s) {
         char[] inputCharArray = s.toCharArray();
         Map<Character, Integer> h = new HashMap<>();
 
-        for (char c: inputCharArray)
-        {
-            if(h.containsKey(c)){
-                h.put(c,h.get(c)+1);
-            }
-            else
-            {
-                h.put(c,1);
+        for (char c : inputCharArray) {
+            if (h.containsKey(c)) {
+                h.put(c, h.get(c) + 1);
+            } else {
+                h.put(c, 1);
             }
 
         }
-        System.out.println(s +" : "+h);
+        System.out.println(s + " : " + h);
 
 
     }
