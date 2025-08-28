@@ -3,7 +3,7 @@ class BackToBasics {
     public static void main(String[] args) {
 
 
-        StringProgram stringProgram = new StringProgram();
+        StringProg stringProgram = new StringProg();
         stringProgram.testProgram();
 
         System.out.println("Start Prog in plain Notepad");

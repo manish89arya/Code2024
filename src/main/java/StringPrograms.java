@@ -112,13 +112,9 @@ public class StringPrograms {
             } else {
                 h.put(c, 1);
             }
-
         }
         System.out.println(s + " : " + h);
-
-
     }
-
 }
 
 
