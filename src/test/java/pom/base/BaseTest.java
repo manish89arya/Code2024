@@ -7,24 +7,23 @@ import pom.factory.DriverManager;
 
 public class BaseTest {
 
-    private ThreadLocal<WebDriver> driver = new ThreadLocal<>();
+    private final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 
-    public void setDriver(WebDriver driver) {
-        this.driver.set(driver);
-    }
     public WebDriver getDriver() {
         return this.driver.get();
     }
 
+    public void setDriver(WebDriver driver) {
+        this.driver.set(driver);
+    }
+
     @BeforeMethod
-    public void startDriver()
-    {
+    public void startDriver() {
         setDriver(new DriverManager().intializeDriver());
     }
 
     @AfterMethod
-    public void quitDriver()
-    {
+    public void quitDriver() {
         getDriver().quit();
     }
 
