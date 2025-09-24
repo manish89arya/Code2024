@@ -1,3 +1,5 @@
+package manish;
+
 public class PrintAscii{
 
 public static void main(String[] args){

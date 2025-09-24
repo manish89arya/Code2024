@@ -1,3 +1,5 @@
+package manish;
+
 class BackToBasics {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package manish;
+
 class StringProg {
 
     public void testProgram() {

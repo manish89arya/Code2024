@@ -1,3 +1,5 @@
+package manish;
+
 class MissingNumber {
 
     public static void main(String[] args) {

@@ -1,3 +1,5 @@
+package manish;
+
 import java.util.Collections;
 import java.util.ArrayList;
 class CollectionConcept{

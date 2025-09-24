@@ -1,3 +1,5 @@
+package manish;
+
 import java.util.HashMap;
 import java.util.Arrays;
 public class TwoSum{

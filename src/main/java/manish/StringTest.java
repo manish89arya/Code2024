@@ -1,3 +1,5 @@
+package manish;
+
 public class StringTest{
 
 
